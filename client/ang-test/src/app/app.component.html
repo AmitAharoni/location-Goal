@@ -1,0 +1,8 @@
+<h1>{{ title }}</h1>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map *ngIf="ballPosition" [latitude]="ballPosition['latitude']" [longitude]="ballPosition['longitude']" [zoom]="15">
+  <agm-marker *ngIf="ballPosition" [latitude]="ballPosition['latitude']" [longitude]="ballPosition['longitude']" [iconUrl] = "'./assets/ball.png'"></agm-marker>
+  <agm-marker *ngIf="goalPosition" [latitude]="goalPosition['latitude']" [longitude]="goalPosition['longitude']" [iconUrl] = "'./assets/goal.png'"></agm-marker>
+</agm-map>
